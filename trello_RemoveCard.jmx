@@ -44,6 +44,31 @@
             <stringProp name="Argument.value">60437d2c8603b933c3289be7</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="UC-1_Throughput" elementType="Argument">
+            <stringProp name="Argument.name">UC-1_Throughput</stringProp>
+            <stringProp name="Argument.value">6.0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="UC-2_Throughput" elementType="Argument">
+            <stringProp name="Argument.name">UC-2_Throughput</stringProp>
+            <stringProp name="Argument.value">5.0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="UC-3_Throughput" elementType="Argument">
+            <stringProp name="Argument.name">UC-3_Throughput</stringProp>
+            <stringProp name="Argument.value">4.0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="UC-4_Throughput" elementType="Argument">
+            <stringProp name="Argument.name">UC-4_Throughput</stringProp>
+            <stringProp name="Argument.value">4.0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="UC-5_Throughput" elementType="Argument">
+            <stringProp name="Argument.name">UC-5_Throughput</stringProp>
+            <stringProp name="Argument.value">3.0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
         </collectionProp>
       </Arguments>
       <hashTree/>
@@ -331,9 +356,10 @@
           <boolProp name="displaySystemProperties">false</boolProp>
         </DebugSampler>
         <hashTree/>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="UC-1 Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">10000</stringProp>
-        </ConstantTimer>
+        <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="UC-1 Constant Throughput Timer" enabled="true">
+          <stringProp name="throughput">${UC-1_Throughput}</stringProp>
+          <intProp name="calcMode">0</intProp>
+        </ConstantThroughputTimer>
         <hashTree/>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="UC-2 Move card to second list" enabled="true">
@@ -455,9 +481,10 @@
           <boolProp name="displaySystemProperties">false</boolProp>
         </DebugSampler>
         <hashTree/>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="UC-2 Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">12000</stringProp>
-        </ConstantTimer>
+        <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="UC-2 Constant Throughput Timer" enabled="true">
+          <stringProp name="throughput">${UC-2_Throughput}</stringProp>
+          <intProp name="calcMode">0</intProp>
+        </ConstantThroughputTimer>
         <hashTree/>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="UC-3 Add description to card" enabled="true">
@@ -579,9 +606,10 @@
           <boolProp name="displaySystemProperties">false</boolProp>
         </DebugSampler>
         <hashTree/>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="UC-3 Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">15000</stringProp>
-        </ConstantTimer>
+        <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="UC-3 Constant Throughput Timer" enabled="true">
+          <stringProp name="throughput">${UC-3_Throughput}</stringProp>
+          <intProp name="calcMode">0</intProp>
+        </ConstantThroughputTimer>
         <hashTree/>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="UC-4 Move card to third list" enabled="true">
@@ -703,9 +731,10 @@
           <boolProp name="displaySystemProperties">false</boolProp>
         </DebugSampler>
         <hashTree/>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="UC-4 Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">15000</stringProp>
-        </ConstantTimer>
+        <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="UC-4 Constant Throughput Timer" enabled="true">
+          <stringProp name="throughput">${UC-4_Throughput}</stringProp>
+          <intProp name="calcMode">0</intProp>
+        </ConstantThroughputTimer>
         <hashTree/>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="UC-5 Delete card" enabled="true">
@@ -820,9 +849,10 @@
           <boolProp name="displaySystemProperties">false</boolProp>
         </DebugSampler>
         <hashTree/>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="UC-5 Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">20000</stringProp>
-        </ConstantTimer>
+        <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="UC-5 Constant Throughput Timer" enabled="true">
+          <stringProp name="throughput">${UC-5_Throughput}</stringProp>
+          <intProp name="calcMode">0</intProp>
+        </ConstantThroughputTimer>
         <hashTree/>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
